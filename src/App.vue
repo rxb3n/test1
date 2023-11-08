@@ -5,8 +5,8 @@
   <div class="eng">
     <h1>To English</h1>
     <div class="input">
-      <input v-model="message" id="toenglish">
-      <button @click=translateAb()>Translate</button>
+      <input v-model="text" id="toenglish">
+      <button class="btn" @click=translateAb()>Translate</button>
       <p>Translation : {{ outputAb }}</p>
     </div>
 
@@ -15,8 +15,8 @@
   <div class="ang">
     <h1>To Angelish</h1>
     <div class="input">
-      <input type="text" id="toang">
-      <button @click=translateBa()>Translate</button>
+      <input v-model="message" id="toang">
+      <button class="btn" @click=translateBa()>Translate</button>
       <p>Translation : {{ outputBa }}</p>
     </div>
   </div>
@@ -286,10 +286,6 @@ return outputJ;
 
 <style scoped>
 
-body {
-  width: 90%;
-  margin: auto;
-}
 .eng {
   width: 50%;
   max-height: 1500px;
@@ -305,16 +301,17 @@ body {
   display: flex;
   flex-direction: column;
 }
+.btn {
+  height: 120px;
+}
 
 input {
-  height: 50%;
-  width: 25%;
+  font-size: 2em;
+  width: 300px;
+  height: 200px;
 }
 
-button {
-  width: 20%;
-  height: 20%;
-}
+
 
 img {
   width: 20%;
